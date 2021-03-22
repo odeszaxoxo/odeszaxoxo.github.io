@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b8b306b3.chunk.css",
+    "main.js": "/portfolio/static/js/main.782b95e2.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.782b95e2.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.99c2035a.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.99c2035a.js.map",
+    "static/js/2.4994d6c8.chunk.js": "/portfolio/static/js/2.4994d6c8.chunk.js",
+    "static/js/2.4994d6c8.chunk.js.map": "/portfolio/static/js/2.4994d6c8.chunk.js.map",
+    "static/js/3.465eef27.chunk.js": "/portfolio/static/js/3.465eef27.chunk.js",
+    "static/js/3.465eef27.chunk.js.map": "/portfolio/static/js/3.465eef27.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.b8b306b3.chunk.css.map": "/portfolio/static/css/main.b8b306b3.chunk.css.map",
+    "static/js/2.4994d6c8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4994d6c8.chunk.js.LICENSE.txt",
+    "static/media/_glob.scss": "/portfolio/static/media/Montserrat-ThinItalic.e95493ca.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99c2035a.js",
+    "static/js/2.4994d6c8.chunk.js",
+    "static/css/main.b8b306b3.chunk.css",
+    "static/js/main.782b95e2.chunk.js"
+  ]
+}
