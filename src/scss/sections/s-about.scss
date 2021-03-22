@@ -1,0 +1,116 @@
+$b: '.s-about';
+
+#{$b} {
+    border-bottom: 1px solid $gray-light-2;
+    padding-bottom: $padding-7xl;
+
+    &__content {
+        margin-top: $padding-3xl;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 45%;
+
+        @include tablet() {
+            max-width: 65%;
+        }
+
+        @include mobile() {
+            max-width: 100%;
+        }
+
+        h1 {
+            font-family: $font-family-base;
+            font-size: $font-size-xl;
+            line-height: 1.25;
+            font-weight: 700;
+
+            &::after {
+                content: '.';
+                color: $turquoise;
+              }
+        }
+    }
+
+    &__description {
+        margin-bottom: $padding-md;
+        p {
+            font-family: $font-family-alt;
+            font-size: $font-size-sm;
+            line-height: 1.56;
+
+            @include mobile() {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+
+    &__info {
+        p {
+            margin-bottom: $padding-xs;
+            text-transform: uppercase;
+            font-size: $font-size-xxs;
+            line-height: 1.66;
+
+            span:first-child {
+                font-family: $font-family-base;
+                opacity: 1;
+                font-weight: 700;
+                display: block;
+                float: left;
+            }
+
+            span:last-child {
+                display: block;
+                font-family: $font-family-alt;
+                opacity: 0.8;
+                padding-left: $padding-4xl * 2;
+            }
+        }
+    }
+
+    &__social {
+        padding-right: $padding-md;
+        margin-bottom: $padding-xxs;
+        min-width: $padding-sm;
+        text-align: center;
+        
+        img {
+            @include size(17px);
+            @include clickable;
+
+            &:hover {
+                filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+
+        @include tablet() {
+            width: 25%;
+        }
+
+        @include mobile() {
+            width: 0;
+        }
+    }
+
+    &__image {
+        width: $padding-7xl * 6;
+
+        @include tablet() {
+            width: $padding-7xl * 3;
+        }
+
+        @include mobile() {
+            width: 0;
+        }
+    }
+}

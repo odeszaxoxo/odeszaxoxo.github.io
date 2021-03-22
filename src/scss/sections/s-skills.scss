@@ -1,0 +1,144 @@
+$b: '.s-skills';
+
+#{$b} {
+    border-bottom: 1px solid $gray-light-2;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $padding-xl;
+
+        @include tablet() {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        width: 30%;
+
+        @include tablet() {
+            width: 100%;
+        }
+
+        h1 {
+            font-family: $font-family-base;
+            font-size: $font-size-xl;
+            line-height: 1.25;
+            font-weight: 700;
+
+            &::after {
+                content: '.';
+                color: $turquoise;
+              }
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+
+        @include tablet() {
+            width: 100%;
+        }
+
+        @include mobile() {
+            flex-direction: column;
+        }
+    }
+
+    &__part {
+        width: 45%;
+
+        @include mobile() {
+            width: 100%;
+            margin-bottom: $padding-md;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h1 {
+            font-family: $font-family-base;
+            font-size: $font-size-xl;
+            line-height: 1.25;
+            font-weight: 700;
+
+            &::after {
+                content: '.';
+                color: $turquoise;
+              }
+        }
+    }
+
+    &__description {
+        margin-bottom: $padding-md;
+        p {
+            font-family: $font-family-alt;
+            font-size: $font-size-sm;
+            line-height: 1.56;
+
+            @include mobile() {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        opacity: 0.8;
+        max-height: 50%;
+
+        &:first-child {
+            border-bottom: 1px solid $gray-light-2;
+
+            & p {
+                margin-bottom: $padding-md;
+            }
+        }
+
+        &:last-child {
+            @include mobile() {
+                border-bottom: 1px solid $gray-light-2;
+
+                & p {
+                    margin-bottom: $padding-md;
+                }
+            }
+            
+            & h2 {
+                margin-top: $padding-md;
+            }
+        }
+
+        &:only-child {
+            @include mobile() {
+                border: none;
+            }
+
+            & h2 {
+                margin-top: 0;
+            }
+        }
+
+        & h2 {
+            font-size: $font-size-md;
+            line-height: 1.55;
+            font-weight: 700;
+            font-family: $font-family-base;
+        }
+
+        & p {
+            font-family: $font-family-alt;
+            font-size: $font-size-sm;
+            line-height: 1.56;
+
+            @include mobile() {
+                font-size: $font-size-xxs;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,250 @@
+$b: '.site-header';
+
+#{$b} {
+  &__container {
+    display: flex;
+    align-items: center;
+    height: $header-h;
+    border-bottom: 1px solid $gray-light-2;
+
+    @include desktop {
+      height: $header-h-d;
+    }
+
+    @include tablet {
+      height: $header-h-t;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    display: block;
+    width: 284px;
+    margin-right: auto;
+
+    @include desktop {
+      width: 188px;
+    }
+
+    @include tablet {
+      width: 170px;
+    }
+
+    & span {
+      font-size: $font-size-lg;
+      font-family: $font-family-base;
+      font-weight: 600;
+
+      &::after {
+        content: '.';
+        color: $turquoise;
+      }
+    }
+  }
+
+  &__navigation {
+    align-self: stretch;
+    flex: 1 1 auto;
+    width: 1px;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-size: $font-size-xxs;
+    font-family: $font-family-base;
+    font-weight: 500;
+
+    @include tablet {
+      display: none;
+    }
+
+    > ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      > li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 0 0 auto;
+        line-height: 1;
+
+        &:not(:last-child) {
+          margin-right: $padding-7xl;
+
+          @include low-desktop {
+            margin-right: $padding-xl;
+          }
+        }
+
+        > a,
+        > span {
+          @include link-decor-line();
+          @include clickable();
+          display: block;
+          position: relative;
+
+          &._active {
+            font-weight: 500;
+          }
+        }
+
+        ul {
+          display: none; // @todo: temp
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: $white-true;
+          padding: $padding-xl $padding-sm;
+          width: 226px;
+
+          > li {
+            ul {
+              top: 0;
+              left: 100%;
+            }
+          }
+        }
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: $padding-sm;
+          }
+        }
+      }
+    }
+  }
+
+  &__icons {
+    margin-left: auto;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    @include clickable();
+    @include round(40px);
+    @include center-flex();
+    position: relative;
+    flex: 0 0 auto;
+    background-color: transparent;
+    transition: $g-transition;
+
+    @include low-desktop {
+      @include size(30px);
+    }
+
+    @include tablet {
+      @include size(35px);
+    }
+
+    &:not(:last-child) {
+      margin-right: $padding-sm;
+
+      @include desktop {
+        margin-right: $padding-xs;
+      }
+
+      @include tablet {
+        margin-right: $padding-sm;
+      }
+
+      @include mobile {
+        margin-right: $padding-xxs;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($accent-base, 0.2);
+      transform: scale(0.9);
+
+      &::before {
+        transform: scale(1.1);
+      }
+    }
+
+    &::before {
+      @include full-abs(-5%);
+      content: '';
+    }
+
+    &._cart {
+      #{$b}__icon-inner {
+        transform: translateY(-5%);
+      }
+
+      svg {
+        path._dot {
+          opacity: 0;
+          transition: $g-transition;
+        }
+      }
+
+      &._no-empty {
+        svg {
+          path._cart-dot {
+            opacity: 1;
+          }
+        }
+
+        .inline-svg {
+          animation: cart-icon-shake 5s infinite;
+        }
+
+        &:hover {
+          .inline-svg {
+            animation: cart-icon-bounce 1.5s infinite;
+          }
+        }
+      }
+    }
+
+    &-inner {
+      width: 22px;
+
+      @include desktop {
+        width: 20px;
+      }
+
+      @include low-desktop {
+        width: 15px;
+      }
+
+      @include tablet {
+        width: 20px;
+      }
+    }
+
+    svg {
+      @include decor();
+    }
+  }
+
+  &__burger {
+    @include clickable();
+    position: relative;
+    width: 20px;
+    margin-left: $padding-lg;
+
+    @include mobile {
+      margin-left: $padding-md;
+    }
+
+    &::before {
+      @include full-abs(-70%);
+      content: '';
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $black-true;
+
+      &:not(:last-child) {
+        margin-bottom: $padding-xxs;
+      }
+    }
+  }
+}

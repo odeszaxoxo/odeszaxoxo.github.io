@@ -1,0 +1,103 @@
+{"portfolioItems": [
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 1,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg", "/img/test1.jpg", "/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 1,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 2,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 2,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 2,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 3,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 3,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 3,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 3,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    },
+    {
+        "imageMain": "/img/test1.jpg",
+        "images": ["/img/test1.jpg"],
+        "name": "Test1",
+        "description": "True dimm - это Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum vitae sem accumsan amet, eu pulvinar erat nibh.",
+        "categoryId": 4,
+        "date": "14 May 2018",
+        "url": "vk.com",
+        "stack": "HTML, CSS, Bootstrap, Javascript, SVG"
+    }
+  ]
+}

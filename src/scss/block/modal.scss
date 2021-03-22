@@ -1,0 +1,148 @@
+$b: '.contact-modal';
+
+#{$b} {
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.3);
+        padding: $padding-5xl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        @include mobile() {
+            padding: $padding-xxs;
+        }
+    }
+
+    &__content {
+        background-color: #fff;
+        border-radius: 5px;
+        min-width: 500px;
+        min-height: 300px;
+        margin: 0 auto;
+        padding: $padding-xl;
+        box-shadow: 0 $padding-xxs $padding-sm rgb(0 0 0 / 20%);
+
+        @include mobile() {
+            min-width: 100%;
+        }
+
+        & h1 {
+            &::after {
+                content: '.';
+                color: $turquoise;
+            }
+        }
+
+        & p {
+            font-size: $font-size-sm;
+            line-height: 1.56;
+            font-family: $font-family-base;
+            margin-bottom: $padding-md;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            font-family: $font-family-alt;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+
+        @include mobile() {
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile() {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        position: relative;
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+
+        &:first-child {
+            margin-bottom: $padding-xl;
+        }
+
+        & input {
+            height: 50px;
+            width: 100%;
+            border: 2px solid transparent;
+            border-radius: 2px;
+            padding: 0 20px;
+            font-family: $font-family-alt;
+            transition: all 0.3s ease;
+
+            &:hover ,
+            &:active ,
+            &:focus {
+                border: 2px solid $turquoise;
+            }
+        }
+    }
+
+    &__textarea{
+        border: 1px solid #e3e3e3;
+        width: 49%;
+        border-radius: 2px;
+
+        @include mobile() {
+            width: 100%;
+            margin-top: $padding-xl;
+        }
+
+        & textarea {
+            height: 132px;
+            width: 100%;
+            border: 2px solid transparent;
+            padding: 15px 20px;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            resize: none;
+            display: block;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            font-family: $font-family-alt;
+
+            &:hover ,
+            &:active ,
+            &:focus {
+                border: 2px solid $turquoise;
+            }
+        }
+    }
+    
+    &__buttons {
+        display: flex;
+        margin-top: $padding-xl;
+    }
+
+    &__button {
+        color: #fff;
+        font-family: $font-family-alt;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:first-child {
+            margin-right: 30px;
+        }
+    }
+}

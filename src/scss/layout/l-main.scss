@@ -1,0 +1,15 @@
+$b: '.l-main';
+
+#{$b} {
+  flex-grow: 1;
+  min-height: 1px;
+  padding-top: $header-h;
+
+  @include desktop {
+    padding-top: $header-h-d;
+  }
+
+  @include tablet {
+    padding-top: $header-h-t;
+  }
+}

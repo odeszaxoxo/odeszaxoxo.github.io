@@ -1,0 +1,49 @@
+$b: '.section';
+
+#{$b} {
+  position: relative;
+  margin-bottom: $padding-7xl;
+
+  @include desktop {
+    margin-bottom: $padding-xl;
+  }
+
+  @include mobile {
+    margin-bottom: $padding-sm;
+  }
+
+  &._pt-xl {
+    padding-top: $padding-xl;
+  }
+
+  &._pt-7xl {
+    padding-top: $padding-7xl;
+  }
+
+  // ._pt-desk-7xl._pt-tab-xl
+  @each $screenPrefix, $width in $grid-screens {
+    @media (max-width: $width) {
+      &._pt-#{$screenPrefix}-xl {
+        padding-top: $padding-xl;
+      }
+
+      &._pt-#{$screenPrefix}-7xl {
+        padding-top: $padding-7xl;
+      }
+    }
+  }
+
+  &__text-content {
+    &:not(:last-child) {
+      margin-bottom: $padding-7xl;
+
+      @include desktop {
+        margin-bottom: $padding-xl;
+      }
+
+      @include mobile {
+        margin-bottom: $padding-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+$b: '.s-portfolio';
+
+#{$b} {
+  border-bottom: 1px solid $gray-light-2;
+  
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $padding-xl;
+        font-family: $font-family-base;
+
+        > ul {
+            margin: $padding-md 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+      
+            > li {
+              display: flex;
+              align-items: center;
+              position: relative;
+              flex: 0 0 auto;
+              line-height: 1;
+      
+              &:not(:last-child) {
+                margin-right: $padding-7xl;
+      
+                @include low-desktop {
+                  margin-right: $padding-xl;
+                }
+              }
+      
+              > a,
+              > span {
+                @include link-decor-line();
+                @include clickable();
+                display: block;
+                position: relative;
+      
+                &._active {
+                  font-weight: 500;
+                }
+              }
+      
+              ul {
+                display: none; // @todo: temp
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $white-true;
+                padding: $padding-xl $padding-sm;
+                width: 226px;
+      
+                > li {
+                  ul {
+                    top: 0;
+                    left: 100%;
+                  }
+                }
+              }
+      
+              li {
+                &:not(:last-child) {
+                  margin-bottom: $padding-sm;
+                }
+              }
+            }
+          }
+    }
+
+    h1 {
+        font-family: $font-family-base;
+        font-size: $font-size-xl;
+        line-height: 1.25;
+        font-weight: 700;
+
+        &::after {
+            content: '.';
+            color: $turquoise;
+          }
+    }
+}

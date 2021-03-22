@@ -1,0 +1,122 @@
+// Screen sizes
+$wide-desktop-width: 1920px;
+$desktop-width: 1440px;
+$low-desktop-width: 1024px;
+$tablet-width: 768px;
+
+// Layout
+$outer-w: 1880px;
+$inner-pd: 40px;
+$inner-pd-d: 30px;
+$inner-pd-ld: 20px;
+$inner-pd-tab: 15px;
+$inner-pd-mob: 15px;
+
+// Sizes
+$header-h: 90px;
+$header-h-d: 70px;
+$header-h-t: 45px;
+
+// Colors
+$black-true: #000;
+$white-true: #fff;
+$gray-light: #fafafb;
+$gray-light-2: #e9e9e9;
+$gray: #333;
+$gray-2: #888;
+$gray-3: #999;
+$gray-dark: #222;
+$turquoise: #0cc;
+
+// UI Colors
+$color-base: $white-true;
+$accent-base: $turquoise;
+$action-base: $turquoise;
+$text-base: $gray;
+$text-dark: $gray-dark;
+$text-light: $gray-2;
+$text-extra-light: $gray-3;
+$border-base: $gray-light-2;
+//$link-base: #1964b1;
+$shadow-base: $black-true;
+$site-preloader-inner: $accent-base;
+$site-preloader-bg: $gray-light;
+
+// Backgrounds
+$bg-main: $gray-light;
+$bg-alt: $white-true;
+
+// Border radius
+$brs-sm: 2px;
+$brs-base: 5px;
+
+// Shadows
+$shadow-sm: 0 0 3px 1px rgba($black-true, 0.15);
+$shadow-base: 0 0 5px 0.5px rgba($black-true, 0.1);
+$shadow-lg: 0 0 10px 1px rgba($black-true, 0.15);
+$shadow-tooltip: 0 4px 4px rgba($black-true, 0.25);
+
+// Padding
+$padding-4xs: 2px;
+$padding-3xs: 3px;
+$padding-xxs: 5px;
+$padding-xs: 10px;
+$padding-sm: 15px;
+$padding-md: 20px;
+$padding-lg: 25px;
+$padding-xl: 30px;
+$padding-xxl: 35px;
+$padding-3xl: 40px;
+$padding-4xl: 45px;
+$padding-5xl: 50px;
+$padding-6xl: 55px;
+$padding-7xl: 60px;
+
+// Typography
+$font-size-xl: 36px;
+$font-size-lg: 24px;
+$font-size-md: 18px;
+$font-size-sm: 16px;
+$font-size-xs: 14px;
+$font-size-xxs: 12px;
+$font-size-3xs: 10px;
+$font-size-4xs: 8px;
+
+$line-height-xl: 50px;
+$line-height-lg: 40px;
+$line-height-md: 30px;
+$line-height-sm: 30px;
+$line-height-xs: 25px;
+$line-height-xxs: 20px;
+$line-height-3xs: 15px;
+$line-height-4xs: 10px;
+
+// Fonts
+$font-base: 'Lato';
+$font-alt: 'Montserrat';
+$font-size: $font-size-md;
+$line-height: $line-height-md;
+$font-family-base: $font-base, arial, helvetica, sans-serif;
+$font-family-alt: $font-alt, arial, helvetica, sans-serif;
+
+// Transition
+$g-transition-duration: 0.25s;
+$g-transition-easing: ease-out;
+$g-transition: all $g-transition-duration $g-transition-easing;
+$transition-duration-alt: 0.5s;
+$transition-easing-alt: cubic-bezier(0.22, 1, 0.36, 1);
+$transition-alt: all $transition-duration-alt $transition-easing-alt;
+
+// Scaling
+$root-font-size: 100;
+
+// Paths
+$image-path: '../img/';
+
+// Grid
+$grid-screens: (
+  "desk": $wide-desktop-width - 1, // desktop
+  "ld": $desktop-width - 1, // low desktop
+  "tab": $low-desktop-width - 1, // tablet
+  "mob": $tablet-width - 1 // mobile
+);

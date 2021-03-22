@@ -1,0 +1,118 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cart-icon-shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  5% {
+    transform: rotate(-10deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  15%,
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes cart-icon-bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-3px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-3px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hand-swipe {
+  5% {
+    transform: translateX(3px) rotate(6deg);
+  }
+
+  25% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  28% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateX(-3px) rotate(-6deg);
+  }
+
+  53% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes hand-swipe-arrow-right {
+  7% {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+
+  17% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  18%,
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes hand-swipe-arrow-left {
+  0%,
+  30% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  37% {
+    transform: translateX(-8px);
+    opacity: 1;
+  }
+
+  47% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  48%,
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}

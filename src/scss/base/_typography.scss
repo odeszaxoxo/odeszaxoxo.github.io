@@ -1,0 +1,41 @@
+h2,
+.g-h2 {
+  @include font-size-xl();
+  font-family: $font-family-alt;
+  font-weight: 600;
+  margin-bottom: $padding-xl;
+  color: $text-dark;
+
+  @include desktop {
+    @include font-size-lg();
+    margin-bottom: $padding-sm;
+  }
+
+  @include low-desktop {
+    @include font-size-md();
+  }
+
+  @include mobile {
+    margin-bottom: $padding-xxs;
+  }
+}
+
+//.g-text-md {}
+//
+//.g-text-sm {}
+//
+//.g-text-xs {}
+
+//.g-editable-content {
+//  @include editable-text();
+//
+//  h3 {
+//    font-size: em(22, 16);
+//  }
+//
+//  p {
+//    &:not(:last-child) {
+//      margin-bottom: em(15, 16);
+//    }
+//  }
+//}

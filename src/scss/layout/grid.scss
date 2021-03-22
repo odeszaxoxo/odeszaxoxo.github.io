@@ -1,0 +1,169 @@
+// DESKTOP FIRST GRID
+
+//<div class="l-row l-row-tab-md  l-row-mb l-row-mb-tab-xs l-row-mb-mob-md">
+//  <div class="l-col-8 l-col-tab-12 l-col-mob-24"></div>
+//  <div class="l-col-8 l-col-tab-12 l-col-mob-24"></div>
+//  <div class="l-col-8 l-col-tab-12 l-col-mob-24"></div>
+//</div>
+
+// Десктоп: 3 колонки (l-col-8) с дефолтными горизонтальными (l-row) и вертикальными (l-row-mb) отступами
+// Планшет(tab): 2 колонки (l-col-tab-12) с горизонтальным отступом md (l-row-tab-md) и вертикальным отступом xs (l-row-mb-tab-xs)
+// Мобилка(mob): 1 колонка (l-col-mob-24) с вертикальным отступом md (l-row-mb-mob-md)
+
+$grid-row-class: 'l-row';
+$grid-col-class: 'l-col';
+
+$grid-columns: 24;
+$grid-gutters: (
+  "xs": $padding-xs,
+  "sm": $padding-sm,
+  "xl": $padding-xl,
+  "7xl": $padding-7xl,
+  "0": 0px
+);
+$grid-default-gutter: map-get($grid-gutters, "xl");
+
+// РЯД------------------------------------------------------------------------------------------------------------------
+// Дефолтные стили ряда, дефолтный отступ между колонками
+[class*="#{$grid-row-class}"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -#{$grid-default-gutter / 2};
+  margin-right: -#{$grid-default-gutter / 2};
+
+  > [class*="#{$grid-col-class}"] {
+    padding-left: #{$grid-default-gutter / 2};
+    padding-right: #{$grid-default-gutter / 2};
+  }
+}
+
+// Дефолтный вертикальный отступ
+.#{$grid-row-class}-mb {
+  margin-bottom: -$grid-default-gutter;
+
+  > [class*="#{$grid-col-class}"] {
+    margin-bottom: $grid-default-gutter;
+  }
+}
+
+// Модификаторы расстояния между колонками ряда (.l-row-none .l-row-20 .l-row-20 .l-row-30)
+@each $gutterName, $gutter in $grid-gutters {
+  .#{$grid-row-class}-#{$gutterName} {
+    margin-left: -#{$gutter / 2};
+    margin-right: -#{$gutter / 2};
+
+    > [class*="#{$grid-col-class}"] {
+      padding-left: #{$gutter / 2};
+      padding-right: #{$gutter / 2};
+    }
+  }
+}
+
+// Модификаторы вертикального отступа ряда (.l-row-mb-none .l-row-mb-20 .l-row-mb-20 .l-row-mb-30)
+@each $gutterName, $gutter in $grid-gutters {
+  .#{$grid-row-class}-mb-#{$gutterName} {
+    margin-bottom: -$gutter;
+
+    > [class*="#{$grid-col-class}"] {
+      margin-bottom: $gutter;
+    }
+  }
+}
+
+// КОЛОНКА--------------------------------------------------------------------------------------------------------------
+// Дефолтные стили колонки
+[class*="#{$grid-col-class}"] {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+// Модификаторы ширины колонки(.l-col-24 / .l-col-12 / .l-col-8)
+@for $i from 1 through $grid-columns {
+  $col-width: (100% / $grid-columns) * $i;
+
+  .#{$grid-col-class}-#{$i} {
+    width: $col-width;
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  $col-width: (100% / $grid-columns) * $i;
+
+  .#{$grid-col-class}-#{$i} {
+    width: $col-width;
+  }
+
+  // Push
+  .#{$grid-col-class}-push-0 {
+    margin-left: 0;
+  }
+  .#{$grid-col-class}-push-#{$i} {
+    margin-left: $col-width;
+  }
+
+  // Pull
+  .#{$grid-col-class}-pull-0 {
+    margin-left: 0;
+  }
+  .#{$grid-col-class}-pull-#{$i} {
+    margin-left: -$col-width;
+  }
+}
+
+// ПРЕФИКСЫ АДАПТИВА----------------------------------------------------------------------------------------------------
+@each $screenPrefix, $width in $grid-screens {
+  @media (max-width: $width) {
+
+    // РЯД--------------------------------------------------------------------------------------------------------------
+    // Модификаторы расстояния между колонками ряда (.l-row-xs-none .l-row-xs-20 .l-row-sm-20 .l-row-md-30)
+    @each $gutterName, $gutter in $grid-gutters {
+      .#{$grid-row-class}-#{$screenPrefix}-#{$gutterName} {
+        margin-left: -#{$gutter / 2};
+        margin-right: -#{$gutter / 2};
+
+        > [class*="#{$grid-col-class}"] {
+          padding-left: #{$gutter / 2};
+          padding-right: #{$gutter / 2};
+        }
+      }
+    }
+
+    // Модификаторы вертикального отступа ряда (.l-row-mb-xs-none .l-row-mb-xs-20 .l-row-mb-sm-20 .l-row-mb-md-30)
+    @each $gutterName, $gutter in $grid-gutters {
+      .#{$grid-row-class}-mb-#{$screenPrefix}-#{$gutterName} {
+        margin-bottom: -$gutter;
+
+        > [class*="#{$grid-col-class}"] {
+          margin-bottom: $gutter;
+        }
+      }
+    }
+
+    // КОЛОНКА----------------------------------------------------------------------------------------------------------
+    // Модификаторы колонки (.l-col-xs-24 .l-col-sm-12 .l-col-md-8 .l-col-md-push-8 .l-col-md-pull-8)
+    @for $i from 1 through $grid-columns {
+      $col-width: (100% / $grid-columns) * $i;
+
+      // Width
+      .#{$grid-col-class}-#{$screenPrefix}-#{$i} {
+        width: $col-width;
+      }
+
+      // Push
+      .#{$grid-col-class}-#{$screenPrefix}-push-0 {
+        margin-left: 0;
+      }
+      .#{$grid-col-class}-#{$screenPrefix}-push-#{$i} {
+        margin-left: $col-width;
+      }
+
+      // Pull
+      .#{$grid-col-class}-#{$screenPrefix}-pull-0 {
+        margin-left: 0;
+      }
+      .#{$grid-col-class}-#{$screenPrefix}-pull-#{$i} {
+        margin-left: -$col-width;
+      }
+    }
+  }
+}

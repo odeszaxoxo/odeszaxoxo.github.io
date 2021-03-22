@@ -1,0 +1,21 @@
+@import '../base/fonts';
+
+$b: '.l-page';
+
+#{$b} {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  
+  &-layout {
+    @include true-vh('min-height', 100);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &._fixed {
+    position: fixed;
+    overflow-y: scroll;
+  }
+}
